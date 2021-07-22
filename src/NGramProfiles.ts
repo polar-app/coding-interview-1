@@ -4,10 +4,6 @@ export namespace NGramProfiles {
 
     import NGramStr = NGramParser.NGramStr;
 
-    export interface NGramProfile {
-        [key: string]: number
-    }
-
     /**
      * The NGram rank including the text of the ngram, and it's count.
      */
@@ -15,6 +11,8 @@ export namespace NGramProfiles {
         readonly text: NGramStr;
         readonly count: number;
     }
+
+    export type NGramProfile = ReadonlyArray<INGramRank>;
 
     /**
      * Give some text, and an n-gram length, compute a score of the n-grams and
@@ -27,7 +25,7 @@ export namespace NGramProfiles {
      * @param len The len of the ngrams.
      * @param limit the max number of ranked ngrams to return.
      */
-    export function compute(text: string, len: number, limit: number): ReadonlyArray<INGramRank> {
+    export function compute(text: string, len: number, limit: number): NGramProfile {
         return [];
     }
 
