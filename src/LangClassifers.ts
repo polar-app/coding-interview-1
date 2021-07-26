@@ -6,6 +6,14 @@ export namespace LangClassifers {
         classify: (text: string) => LangStr;
     }
 
+    /**
+     * The raw algorithm should work like this:
+     *
+     * - Create profiles for each language below
+     * - Create one for the input text.
+     * - Score each lang profile against the input text profile
+     * - Return the top profile.
+     */
     export function create(): ILangClassifier {
 
         function classify(text: string): LangStr {
