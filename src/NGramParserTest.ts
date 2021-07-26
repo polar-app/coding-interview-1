@@ -31,6 +31,30 @@ describe("NGramParser", function() {
 
         assert.deepEqual(ngrams, [
         ])
+
+    });
+
+    it("one char", () => {
+
+        const ngrams: string[] = [];
+
+        NGramParser.parse("h", 1, ngram => ngrams.push(ngram));
+
+        assert.deepEqual(ngrams, [
+        ])
+
+    });
+
+    it("two chars", () => {
+
+        const ngrams: string[] = [];
+
+        NGramParser.parse("he", 1, ngram => ngrams.push(ngram));
+
+        assert.deepEqual(ngrams, [
+            "he"
+        ])
+
     });
 
 });
