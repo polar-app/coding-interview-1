@@ -12,6 +12,7 @@ describe("NGramParser", function() {
         assert.deepEqual(ngrams, [
             "He",
             "el",
+            "ll",
             "lo",
             "o ",
             " W",

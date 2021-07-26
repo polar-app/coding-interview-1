@@ -9,10 +9,11 @@ export namespace NGramParser {
      *
      * For example.
      *
-     * Hello World with len=2 would have the following n-grams.
+     * "Hello World" with len=2 would have the following n-grams.
      *
      * He
      * el
+     * ll
      * lo
      * o
      *  W
@@ -26,8 +27,7 @@ export namespace NGramParser {
      * No more than 10-20 bytes additional overhead for processing the string
      * and the overhead to store the array.
      */
-    export function parse(text: string, len: number, callback: (ngram: NGramStr) => void) {
-        return [];
+    export function parse(text: string, len: number, callback: (ngram: NGramStr) => void): void {
     }
 
 }
