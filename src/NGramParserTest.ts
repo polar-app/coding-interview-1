@@ -23,4 +23,14 @@ describe("NGramParser", function() {
 
     })
 
+    it("empty", () => {
+
+        const ngrams: string[] = [];
+
+        NGramParser.parse("", 2, ngram => ngrams.push(ngram));
+
+        assert.deepEqual(ngrams, [
+        ])
+    });
+
 });
