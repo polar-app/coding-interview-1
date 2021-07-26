@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run-script mocha",
+    "test": "npm run-script compile && npm run-script mocha",
     "mocha": "mocha --timeout 20000 --exit 'src/**/*Test.js'",
     "compile": "tsc"
   },

@@ -9,6 +9,7 @@ describe("NGramParser", function() {
 
         NGramParser.parse("Hello World", 2, ngram => ngrams.push(ngram));
 
+        console.log(ngrams);
         assert.deepEqual(ngrams, [
             "He",
             "el",
