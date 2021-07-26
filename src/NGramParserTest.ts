@@ -3,7 +3,7 @@ import {NGramParser} from "./NGramParser";
 
 describe("NGramParser", function() {
 
-    it("basic", function () {
+    it("basic 2", function () {
 
         const ngrams: string[] = [];
 
@@ -24,6 +24,22 @@ describe("NGramParser", function() {
         ])
 
     })
+
+    it("basic 3", function () {
+
+        const ngrams: string[] = [];
+
+        NGramParser.parse("Hello", 3, ngram => ngrams.push(ngram));
+
+        console.log(ngrams);
+        assert.deepEqual(ngrams, [
+            "Hel",
+            "ell",
+            "llo",
+        ])
+
+    })
+
 
     it("empty", () => {
 
@@ -66,7 +82,8 @@ describe("NGramParser", function() {
         NGramParser.parse("hel", 2, ngram => ngrams.push(ngram));
 
         assert.deepEqual(ngrams, [
-            "he"
+            "he",
+            "el"
         ])
 
     });
