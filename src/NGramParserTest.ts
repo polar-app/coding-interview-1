@@ -38,7 +38,7 @@ describe("NGramParser", function() {
 
         const ngrams: string[] = [];
 
-        NGramParser.parse("h", 1, ngram => ngrams.push(ngram));
+        NGramParser.parse("h", 2, ngram => ngrams.push(ngram));
 
         assert.deepEqual(ngrams, [
         ])
@@ -49,7 +49,19 @@ describe("NGramParser", function() {
 
         const ngrams: string[] = [];
 
-        NGramParser.parse("he", 1, ngram => ngrams.push(ngram));
+        NGramParser.parse("he", 2, ngram => ngrams.push(ngram));
+
+        assert.deepEqual(ngrams, [
+            "he"
+        ])
+
+    });
+
+    it("three chars", () => {
+
+        const ngrams: string[] = [];
+
+        NGramParser.parse("hel", 2, ngram => ngrams.push(ngram));
 
         assert.deepEqual(ngrams, [
             "he"
