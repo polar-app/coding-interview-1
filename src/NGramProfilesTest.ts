@@ -5,11 +5,9 @@ describe("NGramProfilesTest", function() {
 
     it("basic", function () {
 
-        assert.deepEqual(NGramProfiles.compute(TEXT, 2, 50), [
-            {
-                text: "aa",
-                count: 0,
-            }
+        const result = NGramProfiles.compute(TEXT, 2, 10);
+        assert.deepEqual(result , [
+            // FIXME this will be wrong. Build the correct result.
         ])
 
     })
